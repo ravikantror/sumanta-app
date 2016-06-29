@@ -22,7 +22,8 @@ class ArticlesController < ApplicationController
   def create
      @article = current_user.articles.new(article_params)
     if @article.save
-    redirect_to articles_path
+    redirect_to @article
+
    else
     render 'new'
   end
@@ -32,7 +33,7 @@ def update
   @article = current_user.articles.find(params[:id])
  
   if @article.update(article_params)
-    redirect_to show_form_path
+    redirect_to article_path
   else
     render 'edit'
   end

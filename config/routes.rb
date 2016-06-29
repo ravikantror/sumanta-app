@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
     post "articles" => 'articles#create'
     get "articles/new" => 'articles#new' , as: 'new_article'
-    get "articles/:id"=> 'articles#show', as: 'show_form'
+    get "articles/:id"=> 'articles#show', as: 'article'
     get "articles/:id/edit"=> 'articles#edit', as: 'edit'
     post "articles/:id" => 'articles#update'
     get "articles/:id/delete" =>'articles#destroy', as:'delete'
