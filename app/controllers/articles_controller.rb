@@ -23,7 +23,6 @@ class ArticlesController < ApplicationController
      @article = current_user.articles.new(article_params)
     if @article.save
     redirect_to @article
-
    else
     render 'new'
   end
