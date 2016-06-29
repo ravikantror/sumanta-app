@@ -37,7 +37,6 @@ def update
     render 'edit'
   end
 end
-
  def destroy
     @article = current_user.articles.find(params[:id])
     @article.destroy
