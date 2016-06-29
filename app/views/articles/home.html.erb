@@ -1,0 +1,27 @@
+<%= link_to 'Logout',destroy_user_session_path,:method => :delete %>
+<h1>Current User Posts</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>user_id</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.name %></td>
+       
+        <td><%= article.des %></td>
+        
+         <td><%= article.user_id %></td>
+     
+        <td><%= link_to 'Show',show_path(article) %></td>
+      
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Post', new_article_path %>
+<%= link_to "All User Post",articles_path %>
