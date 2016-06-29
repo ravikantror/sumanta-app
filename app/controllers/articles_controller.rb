@@ -21,23 +21,25 @@ class ArticlesController < ApplicationController
   
   def create
      @article = current_user.articles.new(article_params)
-     
-    @article.save
-    redirect_to show_form_path
+    if @article.save
+    redirect_to articles_path
+   else
+    render 'new'
+  end
   end 
   
 def update
-  @article = Article.find(params[:id])
+  @article = current_user.articles.find(params[:id])
  
   if @article.update(article_params)
-    redirect_to @article
+    redirect_to show_form_path
   else
     render 'edit'
   end
 end
 
  def destroy
-    @article = Article.find(params[:id])
+    @article = current_user.articles.find(params[:id])
     @article.destroy
  
     redirect_to articles_path

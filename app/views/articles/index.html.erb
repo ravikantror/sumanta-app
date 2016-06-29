@@ -12,7 +12,7 @@
       <td><%= article.name %></td>
       <td><%= article.des %></td>
       <td><%= article.user_id %></td>
-      <td><%= link_to 'Show', show_path(article) %></td>
+      <td><%= link_to 'Show', show_form_path(article) %></td>
       <td><%= link_to 'Edit', edit_path(article) %></td>
       <td><%= link_to 'Destroy', delete_path(article),
               method: :get,
