@@ -1,10 +1,14 @@
+<h1>WelCome <%= current_user.email %> <h1>
+
 <h1>ALL USER POST</h1>
- <%= current_user.email %>
+
+
 <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
     <th>User Id</th>
+    <th>post type</th>
   </tr>
  
   <% @articles.each do |article| %>
@@ -12,6 +16,7 @@
       <td><%= article.name %></td>
       <td><%= article.des %></td>
       <td><%= article.user_id %></td>
+      <td><%= article.post_type %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
       <td><%= link_to 'Edit', edit_path(article) %></td>
       <td><%= link_to 'Destroy', delete_path(article),

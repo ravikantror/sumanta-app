@@ -12,5 +12,9 @@
   <strong>User Id:</strong>
   <%= @article.user_id %>
 </p>
+
+  <strong>post_type:</strong>
+  <%= @article.post_type%>
+</p>
 <%= link_to 'Back', articles_path %>
 <%= link_to 'Edit', edit_path(@article) %>

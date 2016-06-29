@@ -25,6 +25,10 @@
     <%= f.label :des %><br>
     <%= f.text_area :des %>
   </p>
+   
+ <p>
+   <%= f.select :post_type, [['Public','1'],['Friend','2'],['Private','3']] %>
+  </p>
  
   <p>
     <%= f.submit %>

@@ -1,11 +1,13 @@
 <%= link_to 'Logout',destroy_user_session_path,:method => :delete %>
-<h1>Current User Posts</h1>
+<h1>Hello<%= current_user.email %>, You have Posted..</h1>
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
       <th>user_id</th>
+      <th>post_type</th>
+
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -16,7 +18,9 @@
        
         <td><%= article.des %></td>
         
-         <td><%= article.user_id %></td>
+        <td><%= article.user_id %></td>
+         
+         <td><%= article.post_type %></td>
      
         <td><%= link_to 'Show', article_path(article) %></td>
         <td><%= link_to 'Edit', edit_path(article) %></td>

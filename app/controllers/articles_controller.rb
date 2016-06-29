@@ -47,6 +47,6 @@ end
   
   private
   def article_params
-    params.require(:article).permit(:name , :user_id, :des)
+    params.require(:article).permit(:name , :user_id, :des,:post_type)
   end
 end
