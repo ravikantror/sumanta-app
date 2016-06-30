@@ -2,7 +2,6 @@ class ArticlesController < ApplicationController
   def home
      @articles = current_user.articles
   end
-  
   def index
        @articles = Article.all
   end
