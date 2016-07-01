@@ -17,7 +17,7 @@
       <td><%= article.des %></td>
       <td><%= article.user_id %></td>
       <td><%= article.post_type %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Show', article_path(article),:remote => true%></td>
       <td><%= link_to 'Edit', edit_path(article) %></td>
       <td><%= link_to 'Destroy', delete_path(article),
               method: :get,
@@ -25,6 +25,10 @@
     </tr>
   <% end %>
 </table>
+
+<div id="post_show">
+  
+</div>
 <%= link_to "New Post", new_article_path %>
 <%= link_to "Home",home_path %>
 <%#= link_to "All User Post",articles_path %>
