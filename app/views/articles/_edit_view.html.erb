@@ -1,6 +1,6 @@
 <h1>Edit Post</h1>
  
-<%= form_for @article, :url=>{'action'=>'show'}, method: :post do |f| %>
+<%= form_for @article, method: :post,:remote => true do |f| %>
  
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -36,5 +36,6 @@
  
 <%end%>
  
-<%#= link_to 'Show', article_path %>
-<%#= link_to 'Back', articles_path %>
+<%= link_to 'Show', article_path %>
+<%= link_to 'Back', articles_path %>
+

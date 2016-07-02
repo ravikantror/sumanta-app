@@ -19,27 +19,19 @@ class ArticlesController < ApplicationController
   
   def create
      @article = current_user.articles.new(article_params)
-    if @article.save
-    redirect_to @article
-   else
-    render 'new'
-  end
+     @article.save
+    @articles = Article.all
   end 
   
 def update
   @article = current_user.articles.find(params[:id])
- 
-  if @article.update(article_params)
-    redirect_to article_path
-  else
-    render 'edit'
-  end
+ @article.update(article_params)
+  @articles = Article.all
 end
  def destroy
     @article = current_user.articles.find(params[:id])
     @article.destroy
- 
-    redirect_to articles_path
+    @articles = Article.all
   end
   
   private

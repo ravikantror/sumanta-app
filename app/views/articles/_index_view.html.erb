@@ -1,0 +1,35 @@
+<h1>WelCome <%= current_user.email %> <h1>
+
+<h1>ALL USER POST</h1>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Article Id</th>
+    <th>User Id</th>
+    <th>post type</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.name %></td>
+      <td><%= article.des %></td>
+      <td><%= article.id %></td>
+      <td><%= article.user_id %></td>
+      <td><%= article.post_type %></td>
+      <td><%= link_to 'Show', article_path(article),:remote => true%></td>
+      <td><%= link_to 'Edit', edit_path(article),:remote => true%></td>
+      <td><%= link_to 'Destroy', delete_path(article), :remote => true,
+              method: :get,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%#= link_to "New Post", new_article_path %>
+<%#= link_to "Home",home_path %>
+<%#= link_to "All User Post",articles_path %>
+<%#= link_to 'Logout',destroy_user_session_path,:method => :delete %>
+

@@ -15511,3 +15511,2500 @@ Processing by ArticlesController#show as JS
   Rendered articles/_post_show.html.erb (0.8ms)
   Rendered articles/show.js.erb (9.2ms)
 Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-02 11:22:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 41ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-07-02 11:22:09 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views/devise/sessions/new.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 481ms (Views: 447.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-07-02 11:22:13 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views/devise/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-07-02 11:22:19 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views/devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-07-02 11:22:35 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0TUh1McTcjmL5LyeKuedN2h3o79MpqVM+/FdEs2RGOtZsgSV6OgEulccmEQWRXPMSnhAIjIPNzUyrIkPtz+jAA==", "user"=>{"email"=>"eee@eee.eee", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "eee@eee.eee"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2016-07-02 05:52:35.830930"], ["sign_in_count", 2], ["updated_at", "2016-07-02 05:52:35.832032"], ["id", 15]]
+  [1m[36m (97.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 563ms (ActiveRecord: 106.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-02 11:22:35 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 40ms (Views: 32.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/59" for 127.0.0.1 at 2016-07-02 11:22:41 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"59"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 59]]
+  Rendered articles/_post_show.html.erb (1.0ms)
+  Rendered articles/show.js.erb (5.5ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:29:42 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 11:30:34 +0530
+Processing by ArticlesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 11:30:39 +0530
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BS+0CoyCU8bzHgWxo54rurTtEPId96t/EK2+LXonbdSVDXeUbMC6dSt1P0EHjN6MDrGKtzh1SmTZ134WCeXikw==", "article"=>{"name"=>"hgf", "des"=>"hf", "post_type"=>"1"}, "commit"=>"Save Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hgf"], ["des", "hf"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 06:00:39.152271"], ["updated_at", "2016-07-02 06:00:39.152271"]]
+  [1m[35m (220.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/67
+Completed 302 Found in 248ms (ActiveRecord: 220.7ms)
+
+
+Started GET "/articles/67" for 127.0.0.1 at 2016-07-02 11:30:39 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 67]]
+  Rendered articles/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:30:42 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-02 11:31:46 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-02 11:31:52 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 11:31:56 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 11:32:02 +0530
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DmZAdlfdaS+OnkQ3eVZbEexuxHRebJEd6HbhzBxC6YieRIPot5+AnFb1fsfdRK4nVjJeMXvucAYhDCH3b4Bmzw==", "article"=>{"name"=>"fh", "des"=>"fhf", "post_type"=>"1"}, "commit"=>"Save Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "fh"], ["des", "fhf"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 06:02:02.325365"], ["updated_at", "2016-07-02 06:02:02.325365"]]
+  [1m[36m (119.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/68
+Completed 302 Found in 126ms (ActiveRecord: 120.3ms)
+
+
+Started GET "/articles/68" for 127.0.0.1 at 2016-07-02 11:32:02 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:32:06 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:37:27 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/68" for 127.0.0.1 at 2016-07-02 11:37:31 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 21.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:37:32 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/68" for 127.0.0.1 at 2016-07-02 11:37:34 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/_post_show.html.erb (0.4ms)
+  Rendered articles/show.js.erb (4.8ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:37:40 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:37:44 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:37:44 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/67/edit" for 127.0.0.1 at 2016-07-02 11:37:45 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"67"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 67]]
+  Rendered articles/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/67/edit" for 127.0.0.1 at 2016-07-02 11:37:45 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"67"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 67]]
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/67/edit" for 127.0.0.1 at 2016-07-02 11:37:46 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"67"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 67]]
+  Rendered articles/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/67/edit" for 127.0.0.1 at 2016-07-02 11:37:46 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"67"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 67]]
+  Rendered articles/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/67/edit" for 127.0.0.1 at 2016-07-02 11:37:47 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"67"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 67]]
+  Rendered articles/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-02 11:37:49 +0530
+
+
+Started GET "/articles/49/edit" for 127.0.0.1 at 2016-07-02 11:38:00 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"49"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 49]]
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/49/edit" for 127.0.0.1 at 2016-07-02 11:38:03 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"49"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 49]]
+  Rendered articles/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 11:38:20 +0530
+Processing by ArticlesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:38:22 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 11:39:16 +0530
+Processing by ArticlesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:39:17 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 11:39:19 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:39:21 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/68" for 127.0.0.1 at 2016-07-02 11:39:25 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/_post_show.html.erb (0.4ms)
+  Rendered articles/show.js.erb (4.0ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:41:10 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 11:41:16 +0530
+Processing by ArticlesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:41:17 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 11:41:19 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:41:22 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:41:23 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 11:41:29 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 11:48:11 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 51ms (Views: 28.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/67" for 127.0.0.1 at 2016-07-02 11:48:13 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 67]]
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:48:14 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/68" for 127.0.0.1 at 2016-07-02 11:48:20 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 68]]
+  Rendered articles/_post_show.html.erb (0.4ms)
+  Rendered articles/show.js.erb (4.3ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:48:22 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:48:25 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:48:25 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/68/edit" for 127.0.0.1 at 2016-07-02 11:48:25 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 68]]
+  Rendered articles/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 11:48:30 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 11:59:36 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 53ms (Views: 30.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 11:59:41 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 11:59:46 +0530
+Processing by ArticlesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 11:59:48 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 11:59:50 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:00:36 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:00:40 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:00:42 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 12:01:29 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 12:03:29 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 32ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:03:32 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:03:34 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:03:36 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:03:37 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 12:03:39 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:03:52 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-02 12:04:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 302ms (Views: 257.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:05:07 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 85ms (Views: 75.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:05:16 +0530
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NsGwyPRve32JF3CXzm6s3aK9eD8N/yF/YupTIGwzh2Km43NWFC2SzlF8SmdqfFnrGOHieih9wGSrkJMbH/EIJQ==", "article"=>{"name"=>"sfvgfvhn", "des"=>"fg nm,j", "post_type"=>"2"}, "commit"=>"Save Article"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "sfvgfvhn"], ["des", "fg nm,j"], ["post_type", "2"], ["user_id", "15"], ["created_at", "2016-07-02 06:35:16.498228"], ["updated_at", "2016-07-02 06:35:16.498228"]]
+  [1m[36m (78.3ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 79.6ms)
+
+ActionView::MissingTemplate (Missing template articles/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/aman/Desktop/Sumanta/app/app/views"
+  * "/home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (42.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (65.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:07:46 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:07:48 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:07:52 +0530
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SqsId/s+cuh/w6tumyRRigy7I3kl1ak7SqR5uW/2G0XaicvpG3ybW6eokZ4/NqS8tue5PABXSCCD3rmCHDSUAg==", "article"=>{"name"=>"fdd", "des"=>"thth", "post_type"=>"1"}, "commit"=>"Save Article"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "fdd"], ["des", "thth"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 06:37:52.973051"], ["updated_at", "2016-07-02 06:37:52.973051"]]
+  [1m[36m (101.4ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 102.5ms)
+
+ActionView::MissingTemplate (Missing template articles/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/aman/Desktop/Sumanta/app/app/views"
+  * "/home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (30.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (43.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:08:35 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:08:37 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (3.1ms)
+  Rendered articles/new.js.erb (9.9ms)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles/new" for 127.0.0.1 at 2016-07-02 12:08:41 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"bbgbn", "des"=>"vnhbnbm", "post_type"=>"2"}, "commit"=>"Save Article", "id"=>"new"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new [WHERE "articles"."user_id" = ?]):
+  app/controllers/articles_controller.rb:27:in `update'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.1ms)
+
+
+Started POST "/articles/new" for 127.0.0.1 at 2016-07-02 12:08:44 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"bbgbn", "des"=>"vnhbnbm", "post_type"=>"2"}, "commit"=>"Save Article", "id"=>"new"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new [WHERE "articles"."user_id" = ?]):
+  app/controllers/articles_controller.rb:27:in `update'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:10:45 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:10:46 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (3.1ms)
+  Rendered articles/new.js.erb (7.1ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:10:50 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"gfrgf", "des"=>"ffdbhgf", "post_type"=>"2"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "gfrgf"], ["des", "ffdbhgf"], ["post_type", "2"], ["user_id", "15"], ["created_at", "2016-07-02 06:40:50.989789"], ["updated_at", "2016-07-02 06:40:50.989789"]]
+  [1m[36m (86.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (12.3ms)
+  Rendered articles/create.js.erb (19.9ms)
+Completed 200 OK in 125ms (Views: 30.3ms | ActiveRecord: 88.3ms)
+
+
+Started GET "/articles/71/delete" for 127.0.0.1 at 2016-07-02 12:11:00 +0530
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xx8TPQCjuDgvxCZ0AkiQPVEqw7nrvkSb7E4obEQPu0xXPdCj4OFRi/evHISmWmUL63ZZ/M48pYAlNOhXN800Cw==", "id"=>"71"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 71]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 71]]
+  [1m[36m (95.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 103ms (ActiveRecord: 95.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:11:00 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:11:04 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.5ms)
+  Rendered articles/new.js.erb (6.3ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:11:08 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fbf", "des"=>"fbfb", "post_type"=>"2"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "fbf"], ["des", "fbfb"], ["post_type", "2"], ["user_id", "15"], ["created_at", "2016-07-02 06:41:08.986238"], ["updated_at", "2016-07-02 06:41:08.986238"]]
+  [1m[36m (84.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (11.7ms)
+  Rendered articles/create.js.erb (22.3ms)
+Completed 200 OK in 122ms (Views: 30.1ms | ActiveRecord: 85.7ms)
+
+
+Started GET "/articles/67/delete" for 127.0.0.1 at 2016-07-02 12:11:22 +0530
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Lds1mzYG5uVtPfVVdCXOS0Yhql7a7POCymgXczhEbfm9+fYF1kQPVrVWz6XQNzt9/H0wG/9uEpkDEtdIS4bivg==", "id"=>"67"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 67]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 67]]
+  [1m[36m (86.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 96ms (ActiveRecord: 87.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:11:23 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:11:25 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.0ms)
+  Rendered articles/new.js.erb (6.5ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:11:30 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"hgj", "des"=>"gjhjm", "post_type"=>"2"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "hgj"], ["des", "gjhjm"], ["post_type", "2"], ["user_id", "15"], ["created_at", "2016-07-02 06:41:30.390896"], ["updated_at", "2016-07-02 06:41:30.390896"]]
+  [1m[36m (93.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (11.1ms)
+  Rendered articles/create.js.erb (17.0ms)
+Completed 200 OK in 123ms (Views: 22.4ms | ActiveRecord: 94.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:11:42 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"hgjjghjhjhm", "des"=>"gjhjm", "post_type"=>"2"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hgjjghjhjhm"], ["des", "gjhjm"], ["post_type", "2"], ["user_id", "15"], ["created_at", "2016-07-02 06:41:42.520616"], ["updated_at", "2016-07-02 06:41:42.520616"]]
+  [1m[35m (83.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (11.3ms)
+  Rendered articles/create.js.erb (16.8ms)
+Completed 200 OK in 113ms (Views: 21.8ms | ActiveRecord: 84.8ms)
+
+
+Started GET "/articles/74" for 127.0.0.1 at 2016-07-02 12:19:31 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"74"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 74]]
+  Rendered articles/_post_show.html.erb (1.0ms)
+  Rendered articles/show.js.erb (5.2ms)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/74/edit" for 127.0.0.1 at 2016-07-02 12:19:33 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"74"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 74]]
+  Rendered articles/_edit_view.html.erb (4.0ms)
+  Rendered articles/edit.js.erb (9.3ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:19:42 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"hg", "des"=>"", "post_type"=>"2"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "hg"], ["des", ""], ["post_type", "2"], ["user_id", "15"], ["created_at", "2016-07-02 06:49:42.268178"], ["updated_at", "2016-07-02 06:49:42.268178"]]
+  [1m[36m (85.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (13.0ms)
+  Rendered articles/create.js.erb (19.1ms)
+Completed 200 OK in 120ms (Views: 24.5ms | ActiveRecord: 86.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:24:29 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:24:31 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.4ms)
+  Rendered articles/new.js.erb (7.9ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:24:36 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"nxf", "des"=>"gfng", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "nxf"], ["des", "gfng"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 06:54:36.366774"], ["updated_at", "2016-07-02 06:54:36.366774"]]
+  [1m[35m (83.3ms)[0m  commit transaction
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (17.4ms)
+  Rendered articles/create.js.erb (24.9ms)
+Completed 200 OK in 122ms (Views: 29.6ms | ActiveRecord: 84.8ms)
+
+
+Started GET "/articles/76" for 127.0.0.1 at 2016-07-02 12:24:44 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"76"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 76]]
+  Rendered articles/_post_show.html.erb (0.4ms)
+  Rendered articles/show.js.erb (5.2ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/76/edit" for 127.0.0.1 at 2016-07-02 12:24:45 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"76"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 76]]
+  Rendered articles/_edit_view.html.erb (2.3ms)
+  Rendered articles/edit.js.erb (7.7ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/76/edit" for 127.0.0.1 at 2016-07-02 12:24:51 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"76"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 76]]
+  Rendered articles/_edit_view.html.erb (2.1ms)
+  Rendered articles/edit.js.erb (6.1ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/64/edit" for 127.0.0.1 at 2016-07-02 12:26:19 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 64]]
+  Rendered articles/_edit_view.html.erb (3.6ms)
+  Rendered articles/edit.js.erb (16.6ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/61/edit" for 127.0.0.1 at 2016-07-02 12:26:21 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 61]]
+  Rendered articles/_edit_view.html.erb (2.5ms)
+  Rendered articles/edit.js.erb (7.1ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/61/edit" for 127.0.0.1 at 2016-07-02 12:26:22 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 61]]
+  Rendered articles/_edit_view.html.erb (2.2ms)
+  Rendered articles/edit.js.erb (6.6ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/76/edit" for 127.0.0.1 at 2016-07-02 12:26:24 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"76"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 76]]
+  Rendered articles/_edit_view.html.erb (3.2ms)
+  Rendered articles/edit.js.erb (8.8ms)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 12:26:26 +0530
+Processing by ArticlesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:26:34 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-07-02 12:27:02 +0530
+Processing by ArticlesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", "15"]]
+  Rendered articles/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/68" for 127.0.0.1 at 2016-07-02 12:27:04 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 68]]
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:27:06 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:27:17 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.1ms)
+  Rendered articles/new.js.erb (7.0ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:27:21 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"f", "des"=>"fas", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "f"], ["des", "fas"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 06:57:21.817187"], ["updated_at", "2016-07-02 06:57:21.817187"]]
+  [1m[35m (86.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (13.0ms)
+  Rendered articles/create.js.erb (18.9ms)
+Completed 200 OK in 119ms (Views: 24.0ms | ActiveRecord: 87.9ms)
+
+
+Started GET "/articles/77" for 127.0.0.1 at 2016-07-02 12:32:42 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"77"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 77]]
+  Rendered articles/_post_show.html.erb (0.4ms)
+  Rendered articles/show.js.erb (4.7ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:32:47 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"f", "des"=>"fas", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "f"], ["des", "fas"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 07:02:47.786266"], ["updated_at", "2016-07-02 07:02:47.786266"]]
+  [1m[36m (85.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (12.8ms)
+  Rendered articles/create.js.erb (19.4ms)
+Completed 200 OK in 118ms (Views: 24.4ms | ActiveRecord: 86.5ms)
+
+
+Started GET "/articles/78" for 127.0.0.1 at 2016-07-02 12:32:51 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 78]]
+  Rendered articles/_post_show.html.erb (0.4ms)
+  Rendered articles/show.js.erb (4.4ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/78/edit" for 127.0.0.1 at 2016-07-02 12:32:56 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 78]]
+  Rendered articles/_edit_view.html.erb (2.2ms)
+  Rendered articles/edit.js.erb (7.2ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/78/edit" for 127.0.0.1 at 2016-07-02 12:37:10 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 78]]
+  Rendered articles/_edit_view.html.erb (2.2ms)
+  Rendered articles/edit.js.erb (6.8ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/78" for 127.0.0.1 at 2016-07-02 12:37:14 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 78]]
+  Rendered articles/_post_show.html.erb (1.2ms)
+  Rendered articles/show.js.erb (5.8ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/78/edit" for 127.0.0.1 at 2016-07-02 12:37:20 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 78]]
+  Rendered articles/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/78" for 127.0.0.1 at 2016-07-02 12:40:00 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F40oykIW2MFz3kl39GOKjEWit5YXjsrONzrmvEPMQCaHr+tUolQxcqu1c4dQcX+6//4t0zIMK9X+QCaHMA7PYQ==", "article"=>{"name"=>"f", "des"=>"fas", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"78"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 78]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template articles/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/aman/Desktop/Sumanta/app/app/views"
+  * "/home/aman/.rvm/gems/ruby-2.2.3/gems/devise-3.5.3/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/aman/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (33.2ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.2ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (43.8ms)
+
+
+Started GET "/articles/78" for 127.0.0.1 at 2016-07-02 12:40:04 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 78]]
+  Rendered articles/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:40:06 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-02 12:47:01 +0530
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:49:35 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (3.4ms)
+  Rendered articles/new.js.erb (8.5ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:49:39 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fhh", "des"=>"ghhhhhhhg", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (11.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.6ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "fhh"], ["des", "ghhhhhhhg"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 07:19:39.208374"], ["updated_at", "2016-07-02 07:19:39.208374"]]
+  [1m[36m (118.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (12.5ms)
+  Rendered articles/create.js.erb (33.2ms)
+Completed 200 OK in 208ms (Views: 63.7ms | ActiveRecord: 137.3ms)
+
+
+Started GET "/articles/79/edit" for 127.0.0.1 at 2016-07-02 12:49:45 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_edit_view.html.erb (2.6ms)
+  Rendered articles/edit.js.erb (17.9ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/79" for 127.0.0.1 at 2016-07-02 12:49:50 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_post_show.html.erb (0.8ms)
+  Rendered articles/show.js.erb (5.4ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/79" for 127.0.0.1 at 2016-07-02 12:55:23 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_post_show.html.erb (0.4ms)
+  Rendered articles/show.js.erb (4.3ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/79/edit" for 127.0.0.1 at 2016-07-02 12:55:24 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_edit_view.html.erb (2.2ms)
+  Rendered articles/edit.js.erb (6.3ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/79" for 127.0.0.1 at 2016-07-02 12:55:29 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_post_show.html.erb (0.1ms)
+  Rendered articles/show.js.erb (4.1ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/79/edit" for 127.0.0.1 at 2016-07-02 12:55:33 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_edit_view.html.erb (2.7ms)
+  Rendered articles/edit.js.erb (6.7ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:55:39 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.1ms)
+  Rendered articles/new.js.erb (7.1ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 12:57:14 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (4.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (23.1ms)
+  Rendered articles/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 163ms (Views: 153.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 12:57:18 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.5ms)
+  Rendered articles/new.js.erb (9.3ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 12:57:26 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"jg", "des"=>"jfj", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "jg"], ["des", "jfj"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 07:27:26.212041"], ["updated_at", "2016-07-02 07:27:26.212041"]]
+  [1m[35m (101.1ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (14.2ms)
+  Rendered articles/create.js.erb (20.2ms)
+Completed 200 OK in 134ms (Views: 25.2ms | ActiveRecord: 102.3ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 12:57:31 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/_post_show.html.erb (0.2ms)
+  Rendered articles/show.js.erb (4.7ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/80/edit" for 127.0.0.1 at 2016-07-02 12:57:32 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/_edit_view.html.erb (2.5ms)
+  Rendered articles/edit.js.erb (7.3ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:03:46 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/show.js.erb (1.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...j render(:partial => 'edit_view') );@output_buffer.safe_appe...
+...                               ^
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: unterminated string meets end of file
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/articles/show.js.erb:8: unterminated string meets end of file
+  app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.4ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:03:47 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/show.js.erb (1.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...j render(:partial => 'edit_view') );@output_buffer.safe_appe...
+...                               ^
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: unterminated string meets end of file
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/articles/show.js.erb:8: unterminated string meets end of file
+  app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.7ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:03:48 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/show.js.erb (1.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...j render(:partial => 'edit_view') );@output_buffer.safe_appe...
+...                               ^
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: unterminated string meets end of file
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/articles/show.js.erb:8: unterminated string meets end of file
+  app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.8ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:03:50 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/show.js.erb (1.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...j render(:partial => 'edit_view') );@output_buffer.safe_appe...
+...                               ^
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: unterminated string meets end of file
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/articles/show.js.erb:8: unterminated string meets end of file
+  app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.6ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:03:50 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/show.js.erb (1.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...j render(:partial => 'edit_view') );@output_buffer.safe_appe...
+...                               ^
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: unterminated string meets end of file
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/articles/show.js.erb:8: unterminated string meets end of file
+  app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.7ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:03:51 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/show.js.erb (1.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...j render(:partial => 'edit_view') );@output_buffer.safe_appe...
+...                               ^
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: unterminated string meets end of file
+/home/aman/Desktop/Sumanta/app/app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/articles/show.js.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/articles/show.js.erb:8: unterminated string meets end of file
+  app/views/articles/show.js.erb:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.7ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:04:43 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/_post_show.html.erb (0.2ms)
+  Rendered articles/_new_view.html.erb (1.9ms)
+  Rendered articles/_edit_view.html.erb (2.5ms)
+  Rendered articles/show.js.erb (17.2ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/80" for 127.0.0.1 at 2016-07-02 14:05:18 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/_post_show.html.erb (0.2ms)
+  Rendered articles/show.js.erb (4.7ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/80/edit" for 127.0.0.1 at 2016-07-02 14:05:20 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"80"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 80]]
+  Rendered articles/_edit_view.html.erb (2.2ms)
+  Rendered articles/edit.js.erb (6.3ms)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/80/delete" for 127.0.0.1 at 2016-07-02 14:07:25 +0530
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u1aNtK6Ugkg6eBylVBuXM/JWcGWy0UC5BNSWyY6S6rQrdE4qTtZr++ITJlXwCWIFSArqIJdToaLNrlby/VBl8w==", "id"=>"80"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 80]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 80]]
+  [1m[35m (96.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 107ms (ActiveRecord: 97.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:07:25 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (27.0ms)
+  Rendered articles/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/79" for 127.0.0.1 at 2016-07-02 14:07:29 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_post_show.html.erb (0.2ms)
+  Rendered articles/show.js.erb (4.4ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/78" for 127.0.0.1 at 2016-07-02 14:07:31 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 78]]
+  Rendered articles/_post_show.html.erb (0.2ms)
+  Rendered articles/show.js.erb (4.5ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/77" for 127.0.0.1 at 2016-07-02 14:07:33 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"77"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 77]]
+  Rendered articles/_post_show.html.erb (0.1ms)
+  Rendered articles/show.js.erb (4.8ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/79/edit" for 127.0.0.1 at 2016-07-02 14:07:36 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 79]]
+  Rendered articles/_edit_view.html.erb (2.1ms)
+  Rendered articles/edit.js.erb (6.2ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/79/delete" for 127.0.0.1 at 2016-07-02 14:07:41 +0530
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OYJf6Uo4o7iMdriKdNUCEnqai3MqHptJ/1FVZC7aGwypoJx3qnpKC1QdgnrQx/ckwMYRNg+celI2K5VfXRiUSw==", "id"=>"79"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 79]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 79]]
+  [1m[36m (90.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 97ms (ActiveRecord: 90.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:07:41 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (13.6ms)
+  Rendered articles/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:07:44 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.4ms)
+  Rendered articles/new.js.erb (6.3ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:07:51 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"hfdhf", "des"=>"hghg", "post_type"=>"2"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hfdhf"], ["des", "hghg"], ["post_type", "2"], ["user_id", "15"], ["created_at", "2016-07-02 08:37:51.112577"], ["updated_at", "2016-07-02 08:37:51.112577"]]
+  [1m[35m (102.1ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (13.3ms)
+  Rendered articles/create.js.erb (20.7ms)
+Completed 200 OK in 135ms (Views: 25.8ms | ActiveRecord: 103.1ms)
+
+
+Started GET "/articles/81/edit" for 127.0.0.1 at 2016-07-02 14:09:14 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"81"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 81]]
+  Rendered articles/_edit_view.html.erb (2.8ms)
+  Rendered articles/edit.js.erb (7.1ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/81" for 127.0.0.1 at 2016-07-02 14:09:18 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"81"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 81]]
+  Rendered articles/_post_show.html.erb (0.2ms)
+  Rendered articles/show.js.erb (4.4ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:09:22 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.4ms)
+  Rendered articles/new.js.erb (7.3ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:09:27 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fdfdsa", "des"=>"dfdfd", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fdfdsa"], ["des", "dfdfd"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:39:27.886324"], ["updated_at", "2016-07-02 08:39:27.886324"]]
+  [1m[35m (87.4ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (15.0ms)
+  Rendered articles/create.js.erb (21.8ms)
+Completed 200 OK in 121ms (Views: 26.8ms | ActiveRecord: 88.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:10:09 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fdfdsa", "des"=>"dfdfd", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "fdfdsa"], ["des", "dfdfd"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:40:10.000109"], ["updated_at", "2016-07-02 08:40:10.000109"]]
+  [1m[36m (85.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (18.9ms)
+  Rendered articles/create.js.erb (27.2ms)
+Completed 200 OK in 126ms (Views: 31.9ms | ActiveRecord: 87.6ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:10:12 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fdfdsa", "des"=>"dfdfd", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fdfdsa"], ["des", "dfdfd"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:40:12.320181"], ["updated_at", "2016-07-02 08:40:12.320181"]]
+  [1m[35m (239.3ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (16.1ms)
+  Rendered articles/create.js.erb (23.7ms)
+Completed 200 OK in 279ms (Views: 28.8ms | ActiveRecord: 240.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:10:18 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (16.3ms)
+  Rendered articles/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:10:22 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.2ms)
+  Rendered articles/new.js.erb (6.0ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:10:27 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgd", "des"=>"fgfdg", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dfgd"], ["des", "fgfdg"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:40:27.956225"], ["updated_at", "2016-07-02 08:40:27.956225"]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (13.8ms)
+  Rendered articles/create.js.erb (20.1ms)
+Completed 200 OK in 120ms (Views: 25.0ms | ActiveRecord: 87.1ms)
+
+
+Started GET "/articles/85/edit" for 127.0.0.1 at 2016-07-02 14:10:57 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 85]]
+  Rendered articles/_edit_view.html.erb (2.0ms)
+  Rendered articles/edit.js.erb (6.5ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:11:02 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgd", "des"=>"fgfdgvv", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 85]]
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (13.6ms)
+  Rendered articles/update.js.erb (21.0ms)
+Completed 200 OK in 32ms (Views: 26.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/85/edit" for 127.0.0.1 at 2016-07-02 14:11:08 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"85"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 85]]
+  Rendered articles/_edit_view.html.erb (2.2ms)
+  Rendered articles/edit.js.erb (6.1ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:11:12 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgd", "des"=>"fgfdgffdd", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 85]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (14.0ms)
+  Rendered articles/update.js.erb (20.2ms)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:11:13 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgd", "des"=>"fgfdgffdd", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 85]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (14.3ms)
+  Rendered articles/update.js.erb (21.3ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:11:20 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgdvv", "des"=>"fgfdgffdd", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 85]]
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (14.2ms)
+  Rendered articles/update.js.erb (20.4ms)
+Completed 200 OK in 32ms (Views: 26.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:11:20 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgdvv", "des"=>"fgfdgffdd", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 85]]
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (13.9ms)
+  Rendered articles/update.js.erb (20.7ms)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:11:21 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgdvv", "des"=>"fgfdgffdd", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 85]]
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (13.8ms)
+  Rendered articles/update.js.erb (20.8ms)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/85/edit" for 127.0.0.1 at 2016-07-02 14:13:13 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"85"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 85]]
+  Rendered articles/_edit_view.html.erb (2.6ms)
+  Rendered articles/edit.js.erb (6.6ms)
+Completed 200 OK in 46ms (Views: 12.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:13:18 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgdfghg", "des"=>"fgfdg", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 85]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/articles_controller.rb:28:in `update'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.5ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:13:20 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgdfghg", "des"=>"fgfdg", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 85]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/articles_controller.rb:28:in `update'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.5ms)
+
+
+Started GET "/articles/85/edit" for 127.0.0.1 at 2016-07-02 14:15:07 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 85]]
+  Rendered articles/_edit_view.html.erb (3.8ms)
+  Rendered articles/edit.js.erb (7.8ms)
+Completed 200 OK in 38ms (Views: 14.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:15:08 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (21.7ms)
+  Rendered articles/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/85/edit" for 127.0.0.1 at 2016-07-02 14:15:12 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 85]]
+  Rendered articles/_edit_view.html.erb (2.5ms)
+  Rendered articles/edit.js.erb (6.8ms)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles/85" for 127.0.0.1 at 2016-07-02 14:15:16 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"dfgd", "des"=>"fgfdghggg", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 85]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "articles" SET "des" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["des", "fgfdghggg"], ["updated_at", "2016-07-02 08:45:16.753426"], ["id", 85]]
+  [1m[35m (136.4ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (14.2ms)
+  Rendered articles/update.js.erb (20.6ms)
+Completed 200 OK in 176ms (Views: 25.5ms | ActiveRecord: 137.9ms)
+
+
+Started GET "/articles/85/delete" for 127.0.0.1 at 2016-07-02 14:15:22 +0530
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"20fEwmIE2lMc6Wz0Hva0ymg05mfV6FTGB3mUPVHR7OlLZQdcgkYz4MSCVgS65EH80mh8IvBqtd3OA1QGIhNjrg==", "id"=>"85"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 85]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 85]]
+  [1m[35m (91.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 97ms (ActiveRecord: 92.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:15:22 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (14.7ms)
+  Rendered articles/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:15:28 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.1ms)
+  Rendered articles/new.js.erb (6.7ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:15:32 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fghgf", "des"=>"ghgfdsh", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "fghgf"], ["des", "ghgfdsh"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:45:32.505001"], ["updated_at", "2016-07-02 08:45:32.505001"]]
+  [1m[36m (114.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (16.0ms)
+  Rendered articles/create.js.erb (23.5ms)
+Completed 200 OK in 149ms (Views: 28.4ms | ActiveRecord: 115.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:16:11 +0530
+Processing by ArticlesController#new as JS
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.1ms)
+  Rendered articles/new.js.erb (6.8ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:16:16 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (17.4ms)
+  Rendered articles/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:16:18 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.9ms)
+  Rendered articles/new.js.erb (9.3ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:16:22 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fgsd", "des"=>"gds", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fgsd"], ["des", "gds"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:46:22.590051"], ["updated_at", "2016-07-02 08:46:22.590051"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (17.0ms)
+  Rendered articles/create.js.erb (24.6ms)
+Completed 200 OK in 131ms (Views: 29.8ms | ActiveRecord: 94.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:17:42 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (19.9ms)
+  Rendered articles/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:17:45 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.3ms)
+  Rendered articles/new.js.erb (6.8ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:17:50 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"cgfb", "des"=>"fbfg", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cgfb"], ["des", "fbfg"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:47:50.112429"], ["updated_at", "2016-07-02 08:47:50.112429"]]
+  [1m[35m (98.5ms)[0m  commit transaction
+  [1m[36mArticle Load (1.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (21.9ms)
+  Rendered articles/create.js.erb (30.4ms)
+Completed 200 OK in 153ms (Views: 35.6ms | ActiveRecord: 100.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:19:15 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_index_view.html.erb (2.7ms)
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/aman/Desktop/Sumanta/app/app/views/articles/_index_view.html.erb:25: syntax error, unexpected ':', expecting ')'
+              method: :get,
+                     ^):
+  app/views/articles/_index_view.html.erb:25: syntax error, unexpected ':', expecting ')'
+  app/views/articles/index.html.erb:2:in `_app_views_articles_index_html_erb__207361572__626178818'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.7ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (54.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:19:44 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (17.1ms)
+  Rendered articles/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/88" for 127.0.0.1 at 2016-07-02 14:19:47 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"88"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 88]]
+  Rendered articles/_post_show.html.erb (0.2ms)
+  Rendered articles/show.js.erb (4.6ms)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/88/edit" for 127.0.0.1 at 2016-07-02 14:19:49 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"88"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 88]]
+  Rendered articles/_edit_view.html.erb (2.4ms)
+  Rendered articles/edit.js.erb (7.1ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/88/delete" for 127.0.0.1 at 2016-07-02 14:19:52 +0530
+Processing by ArticlesController#destroy as JS
+  Parameters: {"id"=>"88"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1  [["user_id", "15"], ["id", 88]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 88]]
+  [1m[36m (89.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 94ms (ActiveRecord: 90.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:19:52 +0530
+Processing by ArticlesController#index as JS
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (27.6ms)
+  Rendered articles/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/88/delete" for 127.0.0.1 at 2016-07-02 14:19:56 +0530
+Processing by ArticlesController#destroy as JS
+  Parameters: {"id"=>"88"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 88]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=88 [WHERE "articles"."user_id" = ?]):
+  app/controllers/articles_controller.rb:32:in `destroy'
+
+
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/aman/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-07-02 14:20:50 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (24.2ms)
+  Rendered articles/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 66ms (Views: 44.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-07-02 14:20:53 +0530
+Processing by ArticlesController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered articles/_new_view.html.erb (2.4ms)
+  Rendered articles/new.js.erb (7.1ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-07-02 14:20:57 +0530
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fdhhhg", "des"=>"ghgfhghg", "post_type"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("name", "des", "post_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fdhhhg"], ["des", "ghgfhghg"], ["post_type", "1"], ["user_id", "15"], ["created_at", "2016-07-02 08:50:57.626104"], ["updated_at", "2016-07-02 08:50:57.626104"]]
+  [1m[35m (95.4ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (20.2ms)
+  Rendered articles/create.js.erb (27.0ms)
+Completed 200 OK in 137ms (Views: 31.8ms | ActiveRecord: 96.5ms)
+
+
+Started GET "/articles/89/delete" for 127.0.0.1 at 2016-07-02 14:21:03 +0530
+Processing by ArticlesController#destroy as JS
+  Parameters: {"id"=>"89"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 89]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 89]]
+  [1m[35m (93.5ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (13.7ms)
+  Rendered articles/destroy.js.erb (20.6ms)
+Completed 200 OK in 125ms (Views: 26.2ms | ActiveRecord: 94.6ms)
+
+
+Started GET "/articles/87/edit" for 127.0.0.1 at 2016-07-02 14:21:07 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"87"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 87]]
+  Rendered articles/_edit_view.html.erb (2.1ms)
+  Rendered articles/edit.js.erb (6.4ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles/87" for 127.0.0.1 at 2016-07-02 14:21:13 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "article"=>{"name"=>"fgsdgshg", "des"=>"gdsghs", "post_type"=>"1"}, "commit"=>"Update Article", "id"=>"87"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", "15"], ["id", 87]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "articles" SET "name" = ?, "des" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["name", "fgsdgshg"], ["des", "gdsghs"], ["updated_at", "2016-07-02 08:51:13.601256"], ["id", 87]]
+  [1m[35m (91.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (13.7ms)
+  Rendered articles/update.js.erb (20.2ms)
+Completed 200 OK in 126ms (Views: 25.2ms | ActiveRecord: 92.9ms)

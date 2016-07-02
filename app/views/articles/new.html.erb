@@ -1,7 +1,6 @@
-
 <h1>New Post</h1>
  
-<%= form_for :article, :url=>{'action'=>'create'}, method: :post do |f| %>
+<%= form_for :article, method: :post , :remote => true do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
