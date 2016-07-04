@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'articles#index'
-    get "articles" => 'articles#index'
-    get "home" => 'articles#home'
+    get "articles" => 'articles#index', as:'articles'
+    get "home" => 'articles#index' , as: 'home'
 
     post "articles" => 'articles#create'
     get "articles/new" => 'articles#new' , as: 'new_article'

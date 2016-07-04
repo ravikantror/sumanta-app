@@ -1,10 +1,11 @@
 class ArticlesController < ApplicationController
-  def home
-     @articles = current_user.articles
-  end
   def index
-       @articles = Article.all
+    if params[:_method].present?
+     @articles = current_user.articles
+   else
+     @articles = Article.all
   end
+end
   def new
        @article = Article.new
   end
@@ -18,18 +19,18 @@ class ArticlesController < ApplicationController
   end
   
   def create
-     @article = current_user.articles.new(article_params)
+     @article =current_user.articles.new(article_params)
      @article.save
     @articles = Article.all
   end 
   
 def update
-  @article = current_user.articles.find(params[:id])
+  @article = Article.find(params[:id])
  @article.update(article_params)
   @articles = Article.all
 end
  def destroy
-    @article = current_user.articles.find(params[:id])
+    @article =Article.find(params[:id])
     @article.destroy
     @articles = Article.all
   end

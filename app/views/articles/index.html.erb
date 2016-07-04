@@ -13,7 +13,7 @@
 </div>
 
 <%= link_to "New Post", new_article_path,:remote => true %>
-<%= link_to "Home",home_path %>
-<%#= link_to "All User Post",articles_path %>
+<%= link_to "Home",home_path ,method: :get %>
+<%= link_to "All User Post",articles_path %>
 <%= link_to 'Logout',destroy_user_session_path,:method => :delete %>
 
