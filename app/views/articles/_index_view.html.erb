@@ -13,7 +13,9 @@
   </tr>
  
   <% @articles.each do |article| %>
-    <tr>
+
+    <tr  id="art-<%= article.id %>" , class="art" >
+
       <td><%= article.name %></td>
       <td><%= article.des %></td>
       <td><%= article.id %></td>

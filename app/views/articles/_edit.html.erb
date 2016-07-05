@@ -1,0 +1,25 @@
+<tbody>
+  <tr class="art" , id="art-<%= @article.id %>"  >
+
+  	<td>  	
+          <%=  @article.id %>
+          <%=  @article.user_id %>
+    </td>
+
+    
+
+     <td> <%= form_for @article,:url=>{'controller'=>'articles','action'=>'update'}, method: :post,:remote => true do |f| %>
+            <%= f.text_field :name %>
+            <%= f.text_field :des %>
+            <%= f.select :post_type, [['Public','1'],['Friend','2'],['Private','3']] %>
+
+          <%end%>
+      </td>
+
+      <td>
+         	 <%= form_for @article, method: :post,:remote => true do |f| %>
+         	 	<%= f.submit %>
+      	   <%end%>
+
+      </td>
+</tbody>

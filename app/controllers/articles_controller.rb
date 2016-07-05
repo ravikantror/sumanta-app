@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 end
   def new
        @article = Article.new
+
   end
   
   def show
@@ -40,3 +41,4 @@ end
     params.require(:article).permit(:name , :user_id, :des,:post_type)
   end
 end
+
