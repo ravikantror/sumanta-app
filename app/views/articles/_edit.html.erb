@@ -1,25 +1,22 @@
-<tbody>
-  <tr class="art" , id="art-<%= @article.id %>"  >
 
-  	<td>  	
-          <%=  @article.id %>
-          <%=  @article.user_id %>
-    </td>
+<tbody>
+  <tr class="art" , id= "art-<%= @article.id %>"  >
+
 
     
 
-     <td> <%= form_for @article,:url=>{'controller'=>'articles','action'=>'update'}, method: :post,:remote => true do |f| %>
-            <%= f.text_field :name %>
-            <%= f.text_field :des %>
-            <%= f.select :post_type, [['Public','1'],['Friend','2'],['Private','3']] %>
+      <%= form_for @article,:url=>{'controller'=>'articles','action'=>'update'}, method: :post,:remote => true do |f| %>
+           <td> <%= f.text_field :name %></td>
+           <td> <%= f.text_field :des %></td>
+           <td>  <%= f.select :post_type, [['Public','1'],['Friend','2'],['Private','3']] %></td>
+           <td>  <%= f.submit %> </td>
+           
 
-          <%end%>
-      </td>
+      
+   
+           <td>   <%=  @article.id %><td>
+           <td>  <%=  @article.user_id %></td>
+    <%end%>
 
-      <td>
-         	 <%= form_for @article, method: :post,:remote => true do |f| %>
-         	 	<%= f.submit %>
-      	   <%end%>
-
-      </td>
+    </tr>
 </tbody>
