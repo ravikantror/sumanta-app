@@ -1,0 +1,19 @@
+
+ 
+  <div id="art-<%= @article.id %>">
+
+
+       <%= form_for @article,:url=>{'controller'=>'articles','action'=>'update'}, method: :post,:remote => true do |f| %>
+
+       <table>
+           <tr>
+           <td> <%= f.text_field :name %></td>
+           <td> <%= f.text_field :des %></td>
+           <td> <%=  @article.id %><td>
+           <td> <%=  @article.user_id %></td>
+           <td> <%= f.select :post_type, [['Public','1'],['Friend','2'],['Private','3']] %></td>
+           <td> <%= f.submit 'update'%> </td>
+          </tr>
+      </table>
+      <%end%>
+  </div> 

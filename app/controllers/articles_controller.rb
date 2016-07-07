@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 end
   def new
        @article = Article.new
+
   end
   
   def show
@@ -29,6 +30,7 @@ def update
  @article.update(article_params)
   @articles = Article.all
 end
+
  def destroy
     @article =Article.find(params[:id])
     @article.destroy
