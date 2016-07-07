@@ -27028,6 +27028,7 @@ Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 15:29:58 +0530
 Processing by ArticlesController#edit as JS
   Parameters: {"id"=>"82"}
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 7]]
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at 2016-07-05 15:50:10 +0530
@@ -35646,3 +35647,423 @@ Processing by ArticlesController#update as JS
   Rendered articles/_index_view.html.erb (7.8ms)
   Rendered articles/update.js.erb (13.6ms)
 Completed 200 OK in 174ms (Views: 19.0ms | ActiveRecord: 149.5ms)
+=======
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 82]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" IS NULL LIMIT 1[0m
+  Rendered articles/_edit_view.html.erb (1.5ms)
+  Rendered articles/edit.js.erb (9.0ms)
+Completed 500 Internal Server Error in 840261ms (ActiveRecord: 0.8ms)
+
+SyntaxError (/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/edit.js.erb:1:in `_app_views_articles_edit_js_erb___581406705__628358448'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.7ms)
+
+
+Started GET "/articles/98/edit" for 127.0.0.1 at 2016-07-05 15:43:59 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"98"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 98]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" IS NULL LIMIT 1
+  Rendered articles/_edit_view.html.erb (1.8ms)
+  Rendered articles/edit.js.erb (6.9ms)
+Completed 500 Internal Server Error in 1692ms (ActiveRecord: 0.7ms)
+
+SyntaxError (/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/edit.js.erb:1:in `_app_views_articles_edit_js_erb___581406705__628358448'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (23.9ms)
+
+
+Started GET "/articles/98/edit" for 127.0.0.1 at 2016-07-05 15:44:01 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"98"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 98]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" IS NULL LIMIT 1[0m
+  Rendered articles/_edit_view.html.erb (1.6ms)
+  Rendered articles/edit.js.erb (6.0ms)
+Completed 500 Internal Server Error in 2357ms (ActiveRecord: 0.8ms)
+
+SyntaxError (/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/edit.js.erb:1:in `_app_views_articles_edit_js_erb___581406705__628358448'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (24.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 18:51:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" IS NULL LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_index_view.html.erb (14.5ms)
+  Rendered articles/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 456ms (Views: 377.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/articles/94/edit" for 127.0.0.1 at 2016-07-05 18:51:46 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"94"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 94]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" IS NULL LIMIT 1[0m
+  Rendered articles/_edit_view.html.erb (4.4ms)
+  Rendered articles/edit.js.erb (9.9ms)
+Completed 500 Internal Server Error in 219393ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/edit.js.erb:1:in `_app_views_articles_edit_js_erb___643423356__624618978'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 18:55:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (15.5ms)
+  Rendered articles/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 438ms (Views: 361.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 18:55:38 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (2.1ms)
+  Rendered articles/edit.js.erb (7.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/edit.js.erb:1:in `_app_views_articles_edit_js_erb___1072718733__629435468'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.1ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 18:55:39 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (2.1ms)
+  Rendered articles/edit.js.erb (6.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/edit.js.erb:1:in `_app_views_articles_edit_js_erb___1072718733__629435468'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.0ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 18:55:39 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (2.0ms)
+  Rendered articles/edit.js.erb (6.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/sumanta/Desktop/sumanta/sumanta-app/app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/_edit_view.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/_edit_view.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/_edit_view.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/edit.js.erb:1:in `_app_views_articles_edit_js_erb___1072718733__629435468'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 18:57:15 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (10.1ms)
+  Rendered articles/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 50ms (Views: 30.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 18:57:17 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (32371.9ms)
+  Rendered articles/_edit.html.erb (3.2ms)
+  Rendered articles/edit.js.erb (32383.7ms)
+Completed 200 OK in 32393ms (Views: 32389.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 18:57:49 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (10.2ms)
+  Rendered articles/_edit.html.erb (3.9ms)
+  Rendered articles/edit.js.erb (25.2ms)
+Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 18:57:49 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (3.2ms)
+  Rendered articles/_edit.html.erb (1.6ms)
+  Rendered articles/edit.js.erb (15.5ms)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 18:57:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (12.9ms)
+  Rendered articles/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 439ms (Views: 363.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 18:58:01 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (30.5ms)
+  Rendered articles/_edit.html.erb (3.6ms)
+  Rendered articles/edit.js.erb (44.4ms)
+Completed 200 OK in 58ms (Views: 51.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/93" for 127.0.0.1 at 2016-07-05 18:58:05 +0530
+Processing by ArticlesController#show as JS
+  Parameters: {"id"=>"93"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 93]]
+  Rendered articles/_post_show.html.erb (0.8ms)
+  Rendered articles/show.js.erb (6.3ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 18:58:09 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (4.3ms)
+  Rendered articles/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 19:01:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (11.5ms)
+  Rendered articles/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 413ms (Views: 342.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 19:01:43 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (31.4ms)
+  Rendered articles/_edit.html.erb (3.7ms)
+  Rendered articles/edit.js.erb (45.0ms)
+Completed 200 OK in 58ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 19:02:14 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (5.0ms)
+  Rendered articles/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-05 19:03:19 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (2.5ms)
+  Rendered articles/_edit.html.erb (1.8ms)
+  Rendered articles/edit.js.erb (13.1ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-05 19:03:22 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (4.0ms)
+  Rendered articles/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-06 09:40:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (11.5ms)
+  Rendered articles/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 794ms (Views: 702.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-06 09:40:15 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (4.3ms)
+  Rendered articles/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/82/edit" for 127.0.0.1 at 2016-07-06 09:40:17 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"82"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  Rendered articles/_edit_view.html.erb (148.7ms)
+  Rendered articles/_edit.html.erb (4.3ms)
+  Rendered articles/edit.js.erb (207.2ms)
+Completed 200 OK in 244ms (Views: 238.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles/82" for 127.0.0.1 at 2016-07-06 09:41:15 +0530
+Processing by ArticlesController#update as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Update Article", "id"=>"82"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.2ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: article):
+  app/controllers/articles_controller.rb:41:in `article_params'
+  app/controllers/articles_controller.rb:30:in `update'
+
+
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/sumanta/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-06 10:53:34 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (12.5ms)
+  Rendered articles/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 432ms (Views: 355.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-06 17:14:30 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (14.3ms)
+  Rendered articles/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 537ms (Views: 378.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/95/edit" for 127.0.0.1 at 2016-07-06 17:14:32 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"95"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 95]]
+  Rendered articles/_edit_view.html.erb (77.6ms)
+  Rendered articles/_edit.html.erb (5.3ms)
+  Rendered articles/edit.js.erb (92.3ms)
+Completed 200 OK in 107ms (Views: 100.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-06 17:17:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_index_view.html.erb (15.0ms)
+  Rendered articles/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 445ms (Views: 370.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/articles/94/edit" for 127.0.0.1 at 2016-07-06 17:17:16 +0530
+Processing by ArticlesController#edit as JS
+  Parameters: {"id"=>"94"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (1.5ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 94]]
+  Rendered articles/_edit.html.erb (29.7ms)
+  Rendered articles/edit.js.erb (34.8ms)
+Completed 200 OK in 48ms (Views: 42.1ms | ActiveRecord: 1.6ms)
+>>>>>>> 9c387c7e307f782cd739109cd9c98f8e665791c5
