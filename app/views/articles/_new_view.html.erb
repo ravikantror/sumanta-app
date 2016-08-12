@@ -18,13 +18,13 @@
 	 <div class="col-sm-1">
   <p>
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name ,  :id => 'txttittle'%>
   </p>
  </div>
  <div class="col-sm-2">
   <p>
     <%= f.label :des %><br>
-    <%= f.text_area :des %>
+    <%= f.text_area :des , :id => 'txtarea'%>
   </p>
 </div>
  <div class="col-sm-3">
@@ -35,7 +35,7 @@
  </div>
  <div class="col-sm-4">
   <p>
-    <%= f.submit %>
+    <%= f.submit :id => "btnsubmit" %>
   </p>
 </div>
  </div>
@@ -45,5 +45,24 @@
 <%#= link_to "Back", articles_path %>
 <%#= link_to "Home", home_path %>
 <%#= link_to "All User Post", articles_path %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $("#btnsubmit").click(function(){
+        if($("#txttittle").val() == "")
+        {
+          alert("Enter Name");
+          $("#txttittle").focus();
+          return false;
+        }
+        else if($("#txtarea").val() == "")
+        {
+          alert("Enter Description");
+          $("#txtarea").focus();
+          return false;
+        }
+      });
+  })
+</script> 
 
 
